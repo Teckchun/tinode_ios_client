@@ -1,0 +1,6 @@
+module Pods_Tinodios {
+  umbrella header "Pods-Tinodios-umbrella.h"
+
+  export *
+  module * { export * }
+}
