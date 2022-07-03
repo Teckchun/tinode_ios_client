@@ -42,8 +42,10 @@ public class BaseDb {
     // Meta-status: object should be visible in the UI.
     public static let kStatusVisible = Status.synced
 
-    public static let kBundleId = "co.tinode.tinodios.db"
-    public static let kAppGroupId = "group." + BaseDb.kBundleId
+    public static let kBundleId = "group.com.teckchun.tinodeios.db"
+//    public static let kAppGroupId = "group." + BaseDb.kBundleId
+    public static let kAppGroupId = BaseDb.kBundleId
+  
     // No direct access to the shared instance.
     private static var `default`: BaseDb?
     private static let accessQueue = DispatchQueue(label: BaseDb.kBundleId)
@@ -68,6 +70,7 @@ public class BaseDb {
 
     /// The init is private to ensure that the class is a singleton.
     private init() {
+        print("kAppGroupId-----\(BaseDb.kAppGroupId)")
         var documentsDirectory = FileManager.default
             .containerURL(forSecurityApplicationGroupIdentifier: BaseDb.kAppGroupId)!.absoluteString
         if documentsDirectory.last! != "/" {

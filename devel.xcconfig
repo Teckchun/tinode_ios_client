@@ -11,7 +11,7 @@
 //HOST_NAME = 127.0.0.1:6060
 HOST_NAME = 2886a.com
 // Use TLS (https, wss)
-USE_TLS = NO
+USE_TLS = YES
 
 // App Settings
 APP_NAME = Tinode (test)

@@ -100,6 +100,7 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginClicked(_ sender: Any) {
+       
         let userName = UiUtils.ensureDataInTextField(userNameTextEdit)
         let password = UiUtils.ensureDataInTextField(passwordTextEdit)
 
